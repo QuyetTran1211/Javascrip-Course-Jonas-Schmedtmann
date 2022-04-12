@@ -69,6 +69,40 @@ const jonas = {
 
 console.log(`${jonas.firstName} is a ${jonas.caclAge()}-year old teacher, and he has ${jonas.hasDriver()} driver's license`);
 
+//// Coding Challenge 3
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function() {
+        this.BMI = this.mass / this.height ** 2;
+        return this.BMI;
+    }
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function() {
+        this.BMI = this.mass / this.height ** 2;
+        return this.BMI;
+    }
+}
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+
+if (mark.BMI > john.BMI) {
+    console.log(`${mark.fullName} is higher BMI (${mark.BMI}) than ${john.fullName} BMI (${john.BMI}))`);
+}else {
+    console.log(`${john.fullName} is higher BMI (${john.BMI}) than ${mark.fullName} BMI (${mark.BMI}))`);
+}
+
+
 
 
 
