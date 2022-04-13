@@ -1,1 +1,1 @@
-# jsfundamental-2
+# Javascrip-Course-Jonas-Schmedtmann
