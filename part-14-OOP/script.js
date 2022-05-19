@@ -228,8 +228,13 @@ const ElectricCar = function (make, currentSpeed, charge) {
 
 ElectricCar.prototype = Object.create(Car.prototype);
 
+ElectricCar.prototype.chargeBattery = function (chargeTo) {
+  this.charge = chargeTo;
+  console.log(`charge to ${this.charge}%`);
+};
+
 ElectricCar.prototype.accelerate = function () {
-  this.currentSpeed += 10;
+  this.currentSpeed += 20;
   this.charge--;
   console.log(
     `${this.make} going at ${this.currentSpeed} km/h, with a charge of ${this.charge}%`
@@ -243,16 +248,10 @@ ElectricCar.prototype.brake = function () {
   );
 };
 
-ElectricCar.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-  console.log(`charge to ${this.charge}%`);
-};
-
 const tesla = new ElectricCar('Tesla', 120, 23);
 tesla.accelerate();
 tesla.accelerate();
 tesla.brake();
 tesla.accelerate();
-tesla.chargeBattery = 90;
-console.log(tesla);
+tesla.chargeBattery(90);
 tesla.accelerate();
