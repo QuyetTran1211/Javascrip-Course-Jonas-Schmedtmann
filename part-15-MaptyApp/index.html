@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" type="image/png" href="/icon.png" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-      crossorigin=""
-    />
-    <script
-      defer
-      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-      crossorigin=""
-    ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -24,14 +13,32 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <!-- <script defer src="other.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
     <script defer src="script.js"></script>
     <title>mapty // Map your workouts</title>
   </head>
   <body>
     <div class="sidebar">
       <img src="logo.png" alt="Logo" class="logo" />
-
+      <div class="sidebar__control">
+        <button class="sidebar__btn sidebar__btn--sortDistance">
+          Sort by 📏
+        </button>
+        <button class="sidebar__btn sidebar__btn--sortTime">Sort by ⏰</button>
+        <button class="sidebar__btn sidebar__btn--clearAll">🗑 Clear All</button>
+      </div>
       <ul class="workouts">
         <form class="form hidden">
           <div class="form__row">
@@ -60,13 +67,16 @@
             />
           </div>
           <div class="form__row form__row--hidden">
-            <label class="form__label">Elev Gain</label>
+            <label class="form__label">Elevation</label>
             <input
               class="form__input form__input--elevation"
               placeholder="meters"
             />
           </div>
-          <button class="form__btn">OK</button>
+          <div class="form__control">
+            <button class="form__btn form__btn--cancel">⛔ Cancel</button>
+            <button class="form__btn" type="submit">✅ Save</button>
+          </div>
         </form>
 
         <!-- <li class="workout workout--running" data-id="1234567890">
@@ -91,9 +101,13 @@
             <span class="workout__value">178</span>
             <span class="workout__unit">spm</span>
           </div>
-        </li>
+          <div class="workout__control">
+            <button class="workout__btn workout__btn--clear">🗑 Clear</button>
+            <button class="workout__btn workout__btn--edit">📝 Edit</button>
+          </div>
+        </li> -->
 
-        <li class="workout workout--cycling" data-id="1234567891">
+        <!-- <li class="workout workout--cycling" data-id="1234567891">
           <h2 class="workout__title">Cycling on April 5</h2>
           <div class="workout__details">
             <span class="workout__icon">🚴‍♀️</span>
@@ -115,6 +129,10 @@
             <span class="workout__value">223</span>
             <span class="workout__unit">m</span>
           </div>
+          <div class="workout__control">
+            <button class="workout__btn workout__btn--clear">🗑 Clear</button>
+            <button class="workout__btn workout__btn--edit">📝 Edit</button>
+          </div>
         </li> -->
       </ul>
 
@@ -125,8 +143,14 @@
           target="_blank"
           href="https://twitter.com/jonasschmedtman"
           >Jonas Schmedtmann</a
-        >. Use for learning or your portfolio. Don't use to teach. Don't claim
-        as your own.
+        >
+        &
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://github.com/QuyetTran1211"
+          >QuyetTran1211</a
+        >. Our joint project
       </p>
     </div>
 

@@ -74,7 +74,7 @@ a:visited {
   cursor: pointer;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 0.75rem 1.5rem;
 }
 .workout--running {
@@ -111,6 +111,25 @@ a:visited {
   color: var(--color-light--1);
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.workout__control {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.workout__btn--clear {
+  border-radius: 20px;
+  border: none;
+  padding: 0 1rem;
+}
+
+.workout__btn--edit {
+  border-radius: 20px;
+  border: none;
+  padding: 0 1rem;
 }
 
 .form {
