@@ -29,6 +29,12 @@ const renderError = function (msg) {
   countriesContainer.style.opacity = 1;
 };
 
+const getJSON = function (url, errorMsg = 'No neighbour country') {
+  return fetch(url).then(response => {
+    if (!response) throw new Error(`${errorMsg}`);
+    return response.json();
+  });
+};
 // ///////////////////////////////////////
 // // https://restcountries.com/v2/
 
@@ -89,13 +95,6 @@ const renderError = function (msg) {
 // //       countriesContainer.style.opacity = 1;
 // //     });
 // // };
-
-// const getJSON = function (url, errorMsg = 'No neighbour country') {
-//   return fetch(url).then(response => {
-//     if (!response) throw new Error(`${errorMsg}`);
-//     return response.json();
-//   });
-// };
 
 // const getCountryData = function (country) {
 //   getJSON(`https://restcountries.com/v2/name/${country}`, 'Country not found')
@@ -223,7 +222,11 @@ whereAmI(-33.933, 18.474);*/
 // btn.addEventListener('click', whereAmI);
 
 /*
-Coding Challenge #2 
+
+////////////////////////////////////////////////////////
+// -------Coding Challenge #2 ------//
+////////////////////////////////////////////////////////
+
 For this challenge you will actually have to watch the video! Then, build the image loading functionality that I just showed you on the screen. 
 Your tasks:
 Tasks are not super-descriptive this time, so that you can figure out some stuff by
@@ -245,6 +248,7 @@ Test data: Images in the img folder. Test the error handler by passing a wrong i
 otherwise images load too fast 
 */
 
+/*
 const wait = function (senconds) {
   return new Promise(function (resolve, reject) {
     setTimeout(resolve, senconds * 1000);
@@ -296,3 +300,237 @@ createImage('img/img-1.jpg')
     return wait(2);
   })
   .catch(err => console.error(err));
+*/
+
+////////////////////////////////////////////////////////
+// ------------------ Async Awaits -------------------//
+////////////////////////////////////////////////////////
+
+/*
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async function (country) {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geocoding
+    const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo);
+    // Country data
+    const res = await fetch(
+      `https://restcountries.com/v2/name/${dataGeo.country}`
+    );
+    // console.log(res);
+    const data = await res.json();
+    renderCountry(data[0]);
+
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+  } catch (err) {
+    console.log(`Something went wrong ${err.message}`);
+  }
+};
+// whereAmI('vn');
+
+console.log('1: Will get location');
+(async function () {
+  try {
+    const city = await whereAmI();
+    console.log(`2: ${city}`);
+  } catch (err) {
+    console.log(`2: ${err.message}`);
+  }
+  console.log('3: Finished getting location');
+})();
+*/
+
+/*
+const get3Countries = async function (c1, c2, c3) {
+  try {
+    // const [data1] = await getJSON(`https://restcountries.com/v2/name/${c1}`);
+    // const [data2] = await getJSON(`https://restcountries.com/v2/name/${c2}`);
+    // const [data3] = await getJSON(`https://restcountries.com/v2/name/${c3}`);
+    // console.log([data1.capital, data2.capital, data3.capital]);
+
+    const data = await Promise.all([
+      getJSON(`https://restcountries.com/v2/name/${c1}`),
+      getJSON(`https://restcountries.com/v2/name/${c2}`),
+      getJSON(`https://restcountries.com/v2/name/${c3}`),
+    ]);
+
+    console.log(data.map(d => d[0].capital));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+get3Countries('vn', 'uk', 'us');
+*/
+
+// ------------- Promise.race------------------
+
+/*
+(async function () {
+  const res = await Promise.race([
+    getJSON(`https://restcountries.com/v2/name/tanzania`),
+    getJSON(`https://restcountries.com/v2/name/usa`),
+    getJSON(`https://restcountries.com/v2/name/vn`),
+  ]);
+  console.log(res[0]);
+})();
+
+const timeout = function (sec) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('request took too long!'));
+    }, sec * 1000);
+  });
+};
+
+Promise.race([
+  getJSON(`https://restcountries.com/v2/name/thailand`),
+  timeout(1),
+])
+  .then(res => console.log(res[0]))
+  .catch(err => console.error(err));
+
+//------------------ Promise.allSettled -------------
+
+Promise.allSettled([
+  Promise.resolve('success'),
+  Promise.reject('error'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
+
+Promise.all([
+  Promise.resolve('success'),
+  Promise.reject('error'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+// --------------- Promise.any[ES2021]-------------
+Promise.any([
+  Promise.resolve('success'),
+  Promise.reject('error'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+
+  ///////////////////////////////////////
+// Coding Challenge #3
+
+*/
+
+/* 
+PART 1
+Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
+Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
+
+PART 2
+1. Create an async function 'loadAll' that receives an array of image paths 'imgArr';
+2. Use .map to loop over the array, to load all the images with the 'createImage' function (call the resulting array 'imgs')
+3. Check out the 'imgs' array in the console! Is it like you expected?
+4. Use a promise combinator function to actually get the images from the array 😉
+5. Add the 'paralell' class to all the images (it has some CSS styles).
+
+TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn off the 'loadNPause' function.
+
+GOOD LUCK 😀
+*/
+
+const wait = function (senconds) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(resolve, senconds * 1000);
+  });
+};
+
+const imgContainer = document.querySelector('.images');
+
+const createImage = function (imgPath) {
+  return new Promise(function (resolve, reject) {
+    const newImage = document.createElement('img');
+    newImage.src = imgPath;
+
+    newImage.addEventListener('load', function () {
+      imgContainer.append(newImage);
+      resolve(newImage);
+    });
+
+    newImage.addEventListener('error', function () {
+      reject(new Error('Image not found!'));
+    });
+  });
+};
+
+let currentImg;
+
+// createImage('img/img-1.jpg')
+//   .then(img => {
+//     currentImg = img;
+//     console.log('Image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then(img => {
+//     currentImg = img;
+//     console.log('Image 2 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-3.jpg');
+//   })
+//   .then(img => {
+//     currentImg = img;
+//     console.log('Image 3 loaded');
+//     return wait(2);
+//   });
+
+const loadNPause = async function () {
+  try {
+    // Load image 1
+    let img = await createImage('img/img-1.jpg');
+    console.log('Image 1 loaded');
+    await wait(2);
+    img.style.display = 'none';
+    // load image 2
+    img = await createImage('img/img-2.jpg');
+    console.log('Image 2 loaded');
+    await wait(2);
+    img.style.display = 'none';
+    // load image 3
+    img = await createImage('img/img-3.jpg');
+    console.log('Image 3 loaded');
+    await wait(2);
+  } catch (err) {
+    console.log(err);
+  }
+};
+// loadNPause();
+
+// Part2
+const loadAll = async function (imgArr) {
+  try {
+    const imgs = imgArr.map(async img => await createImage(img));
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => img.classList.add('parallel'));
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
