@@ -1,15 +1,19 @@
 {
-  "name": "fortify",
+  "name": "part-18-forkify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fokify app",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "Jonas Scheddman and Quyettran1211",
+  "author": "Jonas Scheddmann",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "core-js": "^3.22.7",
+    "regenerator-runtime": "^0.13.9"
   }
 }
