@@ -33,7 +33,7 @@
 111C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\abortcontroller-polyfill132983073521300620 1
 125C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\whatwg-url\lib\URLSearchParams-impl.js132983073514239489 0
 111C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\dom-serializer\README.md132983073519385797 0
-78C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist132983076036141117 1
+78C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist132983093548407195 1
 125C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\stable\string\code-point-at.js132983075680379009 0
 112C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\lines-and-columns\LICENSE132983073496836001 0
 106C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\dotenv\package.json132983073499818029 0
@@ -86,7 +86,7 @@
 122C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\stable\number\is-integer.js132983075710308382 0
 142C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\features\reflect\get-own-property-descriptor.js132983075701658616 0
 114C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\css-tree\lib\utils\names.js132983073547211376 0
-84C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\index.html132983050040234105 0
+84C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\index.html132983087247369460 0
 130C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\internals\define-global-property.js132983075682643030 0
 106C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\fill-range\index.js132983074305677217 0
 115C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\source-map\lib\quick-sort.js132983073517331278 0
@@ -232,7 +232,7 @@
 127C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\modules\esnext.array.group-by.js132983075690789160 0
 95C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\src\sass\_upload.scss132983050118219567 0
 125C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\cosmiconfig\dist\ExplorerBase.d.ts.map132983073521290644 0
-94C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\src\js\controller.js132983075905300041 0
+94C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\src\js\controller.js132983093546920199 0
 118C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\es\array\copy-within.js132983075681645689 0
 108C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\web\README.md132983075739160350 0
 97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\css-select132983073526865747 1
@@ -780,7 +780,7 @@
 116C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\stable\url\to-json.js132983075726498325 0
 134C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\terser\node_modules\source-map\lib\array-set.js132983073514069939 0
 149C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\internals\typed-array-constructors-require-wrappers.js132983075736910984 0
-97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\icons.21bad73c.svg132983075289892275 0
+97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\icons.21bad73c.svg132983083998469882 0
 115C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\msgpackr-extract\binding.gyp132983073502929714 0
 135C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\features\typed-array\to-locale-string.js132983075726538224 0
 104C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\yaml\package.json132983073538724060 0
@@ -2799,7 +2799,7 @@
 99C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\css-what\lib132983073502281452 1
 104C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\json5\lib\util.js132983073519954220 0
 106C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\json5\dist\index.js132983073506001510 0
-97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.f7626f62.css132983075289732689 0
+97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.f7626f62.css132983083998001139 0
 161C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias\main.js132983073538803842 0
 110C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\json5\dist\index.min.js132983073512952926 0
 111C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\json5\dist\index.min.mjs132983073522078540 0
@@ -4032,7 +4032,7 @@
 125C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\@parcel\core\src\public\BundleGraph.js132983073536051195 0
 124C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\proposals\object-iteration.js132983075716901277 0
 122C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\features\instance\values.js132983075737998085 0
-96C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.e37f48ea.js132983076036061336 0
+96C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.e37f48ea.js132983093548377270 0
 129C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\proposals\object-values-entries.js132983075717100788 0
 124C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\proposals\pattern-matching.js132983075718142301 0
 127C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\proposals\promise-all-settled.js132983075718421549 0
@@ -4850,7 +4850,7 @@
 113C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\full\string\sup.js132983075725510968 0
 118C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\full\string\trim-end.js132983075735045481 0
 119C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\full\string\trim-left.js132983075735803458 0
-99C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\favicon.8b2f57bf.png132983075289732689 0
+99C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\favicon.8b2f57bf.png132983083998559676 0
 116C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\features\math\log2.js132983075714477241 0
 120C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\full\string\trim-right.js132983075735992954 0
 120C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\full\string\trim-start.js132983075736192417 0
@@ -5684,7 +5684,7 @@
 123C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\caniuse-lite\data\features\webvtt.js132983073573178726 0
 119C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\es\number\constructor.js132983075681266710 0
 117C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\es\number\is-finite.js132983075709809720 0
-97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\icons.dfd7a6db.svg132983075289892275 0
+97C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\icons.dfd7a6db.svg132983083998469882 0
 126C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\caniuse-lite\data\features\svg-html5.js132983073570675412 0
 118C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\core-js\es\number\is-integer.js132983075710218634 0
 124C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\caniuse-lite\data\features\ac3-ec3.js132983073508395107 0
@@ -7504,7 +7504,7 @@
 100C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\.bin\svgo.ps1132983073574495203 0
 102C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\.bin\terser.cmd132983073574515160 0
 102C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\node_modules\.bin\terser.ps1132983073574535105 0
-100C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.e37f48ea.js.map132983076036121167 0
-101C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.f7626f62.css.map132983075289832421 0
-89C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.html132983075289982030 0
-96C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\logo.726d37a8.png132983075289732689 0
+100C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.e37f48ea.js.map132983093548397220 0
+101C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.f7626f62.css.map132983083998001139 0
+89C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\index.html132983087248491326 0
+96C:\Users\tranm\Desktop\Javascrip-Course-Jonas-Schmedtmann\part-18-Forkify\dist\logo.726d37a8.png132983083998599542 0
