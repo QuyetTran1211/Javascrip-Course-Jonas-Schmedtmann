@@ -504,7 +504,6 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"aenu9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-// import icons from '../img/icons.svg';
 var _esArrayIncludesJs = require("core-js/modules/es.array.includes.js"); // window.addEventListener('hashchange', showRecipe);
  // window.addEventListener('load', showRecipe);
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
@@ -537,10 +536,10 @@ const showRecipe = async function() {
     try {
         const id = window.location.hash.slice(1);
         console.log(id);
+        if (!id) return;
         // 1-----------Loading recipe----------------------
         renderSpinner(recipeContainer);
-        const res = await fetch(// 'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'
-        "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886");
+        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
         const data = await res.json();
         console.log(res, data);
         let { recipe  } = data.data;
@@ -2532,6 +2531,6 @@ try {
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}]},["2kSJi","aenu9"], "aenu9", "parcelRequire4e33")
+},{}]},["2kSJi","aenu9"], "aenu9", "parcelRequire17d9")
 
 //# sourceMappingURL=index.e37f48ea.js.map
