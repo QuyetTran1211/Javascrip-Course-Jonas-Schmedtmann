@@ -17,7 +17,7 @@ export const loadRecipe = async function (id) {
 
     // -----------------------------------------------
     const { recipe } = data.data;
-    console.log(recipe);
+    // console.log(recipe);
     state.recipe = {
       id: recipe.id,
       title: recipe.title,
@@ -65,4 +65,14 @@ export const getSearchResultsPage = function (page = state.search.page) {
   const end = page * state.search.resultsPerPage; //9;
 
   return state.search.results.slice(start, end);
+};
+
+export const updateServings = function (newServings) {
+  state.recipe.ingredients.forEach(ing => {
+    return (ing.quantity =
+      (ing.quantity * newServings) / state.recipe.servings);
+    // newQt = oldQt * newServings / oldServings // 2 * 8 / 4 = 4
+  });
+
+  state.recipe.servings = newServings;
 };
